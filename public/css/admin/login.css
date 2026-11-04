@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "Lexend";
+    font-weight: 400;
+    src: url("../../font/Lexend-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Lexend";
+    font-weight: 700;
+    src: url("../../font/Lexend-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Lexend";
+    font-weight: 300;
+    src: url("../../font/Lexend-Light.ttf");
+}
+
+@font-face {
+    font-family: "Lexend";
+    font-weight: 500;
+    src: url("../../font/Lexend-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Lexend";
+    font-weight: 600;
+    src: url("../../font/Lexend-SemiBold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--primary-color) black;
+    scrollbar-width: thin;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: "Lexend" !important;
+    background: linear-gradient(to right, #f3f7ff 0%, #f3f8fe 100%);
+    overflow-x: clip;
+}
+
+.img-login {
+    position: relative;
+    background: linear-gradient(to bottom, #00307a 0%, #0c397d 100%);
+    height: 65dvh;
+    border-radius: 5%;
+}
+
+.img-login::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at 10% 20%,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(3, 70, 227, 0.3) 70%
+    );
+    border-radius: 5%;
+}
+
+#emailUser,
+#passwordUser {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#emailUser:focus,
+#passwordUser:focus {
+    border: 1px solid #00307a;
+    outline: none;
+    box-shadow: none;
+}
+
+#emailUser:focus::placeholder,
+#passwordUser:focus::placeholder {
+    transform: translateX(30px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}

@@ -1,0 +1,64 @@
+.tombol-news{
+    background-color: transparent;
+    color: #000000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.tombol-news:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+.tombol-news:active{
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #000000;
+}
+
+.card {
+    overflow: hidden; /* Hindari konten keluar dari card */
+    border-radius: 0.5rem; /* Opsional: buat sudut agak melengkung */
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.card-img-top-wrapper {
+    padding: 1rem; /* Ganti p-3 */
+}
+
+.kartu-news:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+#news .selengkapnya {
+    padding: 10px 24px;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+#news .selengkapnya:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}

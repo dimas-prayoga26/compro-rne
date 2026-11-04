@@ -1,0 +1,82 @@
+.gallery-swiper {
+    position: relative;
+}
+
+.gallery-swiper .swiper-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-swiper .swiper-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay gelap untuk menggelapkan gambar */
+.gallery-swiper .overlay-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.45); /* transparansi sedang */
+    z-index: 1;
+}
+
+/* Teks di atas overlay */
+.gallery-swiper .overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    padding: 2rem;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    width: 100%;
+}
+
+.overlay-text p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+
+/* Tampilkan teks 1 detik setelah slide aktif */
+.gallery-swiper .swiper-slide-active .overlay-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1s;
+}
+
+/* Swiper bullet style (optional) */
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.6;
+}
+.swiper-pagination-bullet-active {
+    background: #E7C00F;
+    opacity: 1;
+}
+
+#gallery .selengkapnya {
+    padding: 10px 24px;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+#gallery .selengkapnya:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}

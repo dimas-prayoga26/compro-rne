@@ -1,0 +1,27 @@
+.layanan .container h5{
+    color: var(--primary-color);
+}
+
+.layanan .layanan-card{
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.layanan .layanan-card .icon{
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+#location h5{
+    color: var(--primary-color);
+}
+
+#location .map{
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+
+
+#visi h4{
+    color: var(--primary-color);
+}
+
+#visi .line-bar{
+    background: linear-gradient(to right, rgba(0, 68, 173, 0) 0%, #0044AD 50%, rgba(0, 68, 173, 0) 100%);
+    height: 4px;
+    width: 50%;
+    transform: rotate(180deg);
+}
+
+#visi .card-misi{
+    background: linear-gradient(to top, #00307A 0%, #1B4C96 100%);
+    border-radius: 11px;
+}

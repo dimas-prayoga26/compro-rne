@@ -1,0 +1,113 @@
+.about {
+    position: relative;
+    background: linear-gradient(to right, #F3F7FF 0%, #F3F8FE 100%);
+    overflow: hidden;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120px;
+    width: 300px; /* coba gedein biar keliatan dulu */
+    height: 100%;
+    background-image: url("../../img/Main/background-about.png"); /* path langsung */
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    z-index: 0;
+}
+
+.about > * {
+    position: relative;
+    z-index: 1;
+}
+
+.about .container h5{
+    color: var(--primary-color);
+}
+
+.image-grid {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Gambar utama */
+.image-grid .main-image img {
+  width: 52vh;
+  height: 512px;
+  object-fit: cover;
+  border-radius: 16px;
+  /* box-shadow: 0 4px 10px rgba(0,0,0,0.15); */
+}
+
+/* Gambar kecil */
+.image-grid .small-image {
+  position: absolute;
+  background: #fff;
+  /* box-shadow: 0 3px 8px rgba(0,0,0,0.15); */
+}
+
+.image-grid .small-image .top-right img {
+  width: 285px;
+  height: 153px;
+  border-radius: 10px;
+}
+
+.image-grid .small-image .bottom-left img {
+  width: 204px;
+  height: 219px;
+  border-radius: 10px;
+}
+
+/* Posisi persis seperti contohmu */
+.image-grid .top-right {
+  top: -24px;
+  right: -220px;
+}
+
+.image-grid .bottom-left {
+  bottom: -23px;
+  left: -30px;
+}
+
+@media (max-width: 1704px) {
+  .image-grid .small-image {
+    display: none;
+  }
+}
+
+@media (max-width: 991px){
+    .image-grid{
+        display: flex;
+        flex-direction: column;
+        display: none;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* Responsif: ubah ke flex di layar kecil */
+@media (max-width: 768px) {
+  .image-grid {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .image-grid .small-image {
+    position: static;
+    padding: 0;
+    display: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .image-grid .small-image img {
+    width: 100%;
+    display: none;
+    max-width: 250px;
+  }
+}
